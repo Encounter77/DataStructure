@@ -73,18 +73,18 @@ public class LinkedListQueue<E> implements Queue<E> {
 
     @Override
     public E dequeue() {
-        // 出队 从链表头部进行
+        // dequeue from head.
         if (isEmpty()) {
             throw new IllegalArgumentException("Queue is empty");
         }
-        // 获取待出队元素
+        // get dequeue element
         Node retNode = head;
-        // 头指针后移
+        // head move
         head = head.next;
-        // 待删除元素与链表断开
+        //
         retNode.next = null;
         if (head == null) {
-            // 链表中仅有一个元素的情况，头指针移动后变为空链表
+            // if linkedList has only one element, moved head point and tail point set null
             tail = null;
         }
         size --;
