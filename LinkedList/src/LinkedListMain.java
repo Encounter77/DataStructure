@@ -47,11 +47,11 @@ public class LinkedListMain {
 //        System.out.println("ArrayStack：" + time1);
 //        System.out.println("LinkedListStack：" + time2);
 
-        int opCount = 100000;
+        int opCount = 100000000;
         Queue<Integer> arrayQueue = new ArrayQueue<>();
         Queue<Integer> loopQueue = new LoopQueue<>();
         LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
-        System.out.println("arrayQueue：" + testQueue(arrayQueue, opCount) + " s");
+//        System.out.println("arrayQueue：" + testQueue(arrayQueue, opCount) + " s");
         System.out.println("loopQueue：" + testQueue(loopQueue, opCount) + " s");
         System.out.println("linkedListQueue：" + testQueue(linkedListQueue, opCount) + " s");
     }
